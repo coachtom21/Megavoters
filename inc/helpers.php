@@ -23,6 +23,7 @@ function megavoters_page_slugs() {
 		'terms',
 		'independence',
 		'rsvp',
+		'treasured-penny',
 	);
 }
 
@@ -183,6 +184,15 @@ function megavoters_page_url( $slug ) {
 }
 
 /**
+ * Go Live Moment anchor on the Oligopoly page.
+ *
+ * @return string
+ */
+function megavoters_go_live_url() {
+	return esc_url( rtrim( megavoters_page_url( 'oligopoly' ), '/' ) . '/#go-live-moment' );
+}
+
+/**
  * Homepage section hash, or full URL when not on the front page.
  *
  * @param string $id Section id without #.
@@ -226,5 +236,6 @@ function megavoters_page_templates() {
 		'terms'                => 'templates/page-terms.php',
 		'independence'         => 'templates/page-independence.php',
 		'rsvp'                 => 'templates/page-rsvp.php',
+		'treasured-penny'      => 'templates/page-treasured-penny.php',
 	);
 }

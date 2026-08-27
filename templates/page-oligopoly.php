@@ -47,6 +47,8 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 	<p><strong><?php esc_html_e( 'SHOWING UP. MAKE IT EQUAL. ≐', 'megavoters' ); ?></strong></p>
 </main>
 
+<?php include get_stylesheet_directory() . '/inc/go-live-moment.php'; ?>
+
 <?php
 include get_stylesheet_directory() . '/inc/site-footer.php';
 include get_stylesheet_directory() . '/inc/layout-end.php';

@@ -27,6 +27,7 @@ function megavoters_ensure_pages() {
 		'terms'              => __( 'Terms', 'megavoters' ),
 		'independence'       => __( 'Independence', 'megavoters' ),
 		'rsvp'               => __( 'RSVP', 'megavoters' ),
+		'treasured-penny'    => __( 'Treasured Penny', 'megavoters' ),
 	);
 
 	$created = false;
@@ -93,3 +94,35 @@ function megavoters_ensure_guidelines_page() {
 	update_option( 'megavoters_guidelines_page', '1' );
 }
 add_action( 'init', 'megavoters_ensure_guidelines_page', 21 );
+
+/**
+ * Publish Treasured Penny once.
+ *
+ * @return void
+ */
+function megavoters_ensure_treasured_penny_page() {
+	if ( get_option( 'megavoters_treasured_penny_page' ) === '1' ) {
+		$page = get_page_by_path( 'treasured-penny' );
+		if ( $page instanceof WP_Post ) {
+			return;
+		}
+	}
+
+	$page = get_page_by_path( 'treasured-penny' );
+	if ( ! ( $page instanceof WP_Post ) ) {
+		wp_insert_post(
+			array(
+				'post_title'     => __( 'Treasured Penny', 'megavoters' ),
+				'post_name'      => 'treasured-penny',
+				'post_status'    => 'publish',
+				'post_type'      => 'page',
+				'post_content'   => '',
+				'comment_status' => 'closed',
+				'ping_status'    => 'closed',
+			)
+		);
+	}
+
+	update_option( 'megavoters_treasured_penny_page', '1' );
+}
+add_action( 'init', 'megavoters_ensure_treasured_penny_page', 22 );

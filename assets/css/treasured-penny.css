@@ -1,0 +1,366 @@
+/**
+ * MEGAvoters Treasured Penny — Mega tokens, not LLB cream/Playfair.
+ *
+ * @package MEGAvoters
+ */
+
+body.mega-tp-body {
+	--tp-navy: #071f38;
+	--tp-blue: #0879bd;
+	--tp-teal: #087f83;
+	--tp-gold: #f2b51d;
+	--tp-cream: #f7f0e4;
+	--tp-paper: #fffdf8;
+	--tp-ink: #0a2944;
+	--tp-muted: #5a6b7a;
+	--tp-line: #d7e1e8;
+	background: var(--tp-paper);
+	color: var(--tp-ink);
+}
+
+.mega-tp-page {
+	overflow-x: clip;
+}
+
+.mega-tp-page * {
+	box-sizing: border-box;
+}
+
+.mega-tp-wrap {
+	width: min(1160px, calc(100% - 36px));
+	margin: auto;
+}
+
+.mega-tp-eyebrow,
+.mega-tp-kicker {
+	margin: 0 0 12px;
+	color: var(--tp-teal);
+	font-size: 0.78rem;
+	font-weight: 850;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.mega-tp-hero {
+	padding: 72px 0 64px;
+	color: #fff;
+	background:
+		radial-gradient(circle at 86% 16%, rgba(242, 181, 29, 0.32), transparent 28%),
+		linear-gradient(135deg, var(--tp-navy), #0b3a58 58%, var(--tp-teal));
+}
+
+.mega-tp-hero-grid {
+	display: grid;
+	grid-template-columns: 1.05fr 0.95fr;
+	gap: 40px;
+	align-items: start;
+}
+
+.mega-tp-hero h1 {
+	max-width: 16ch;
+	margin: 0 0 18px;
+	font-size: clamp(2.6rem, 6vw, 5.2rem);
+	line-height: 0.98;
+	letter-spacing: -0.04em;
+}
+
+.mega-tp-hero h1 em {
+	color: var(--tp-gold);
+	font-style: italic;
+}
+
+.mega-tp-lead {
+	max-width: 42rem;
+	margin: 0 0 14px;
+	color: #e8f4f6;
+	font-size: clamp(1.05rem, 2vw, 1.3rem);
+	line-height: 1.55;
+}
+
+.mega-tp-hero p {
+	max-width: 42rem;
+	color: #d5e7ee;
+	line-height: 1.65;
+}
+
+.mega-tp-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 28px;
+}
+
+.mega-tp-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 46px;
+	padding: 0 18px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 999px;
+	color: #fff;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.mega-tp-btn.is-primary {
+	border-color: var(--tp-gold);
+	background: var(--tp-gold);
+	color: var(--tp-navy);
+}
+
+.mega-tp-btn.is-quiet {
+	border-color: transparent;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.mega-tp-card {
+	padding: 28px 24px;
+	border-radius: 22px;
+	background: var(--tp-paper);
+	color: var(--tp-ink);
+	box-shadow: 0 22px 50px rgba(7, 31, 56, 0.22);
+}
+
+.mega-tp-stamp {
+	margin: 0 0 12px;
+	color: var(--tp-teal);
+	font-size: 0.72rem;
+	font-weight: 850;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.mega-tp-coin {
+	display: grid;
+	place-items: center;
+	width: 124px;
+	height: 124px;
+	margin: 8px auto 18px;
+	border: 3px solid #c9891a;
+	border-radius: 50%;
+	color: #4c2c0b;
+	background: var(--tp-gold);
+	font: 800 44px/1 Arial, sans-serif;
+}
+
+.mega-tp-card h2 {
+	margin: 0 0 10px;
+	font-size: 1.35rem;
+}
+
+.mega-tp-card p {
+	margin: 0;
+	color: var(--tp-muted);
+}
+
+.mega-tp-section {
+	padding: 72px 0;
+}
+
+.mega-tp-alt {
+	background: var(--tp-cream);
+}
+
+.mega-tp-center {
+	text-align: center;
+}
+
+.mega-tp-page h2 {
+	max-width: 18ch;
+	margin: 0 0 14px;
+	font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+	line-height: 1.12;
+	letter-spacing: -0.03em;
+}
+
+.mega-tp-center h2,
+.mega-tp-close h2 {
+	max-width: none;
+}
+
+.mega-tp-intro,
+.mega-tp-section p {
+	max-width: 46rem;
+	color: var(--tp-muted);
+	line-height: 1.7;
+}
+
+.mega-tp-center p {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mega-tp-words {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 22px;
+}
+
+.mega-tp-words span {
+	padding: 8px 14px;
+	border: 1px solid var(--tp-line);
+	border-radius: 999px;
+	background: #fff;
+	font-size: 0.92rem;
+	font-weight: 800;
+}
+
+.mega-tp-steps,
+.mega-tp-levels,
+.mega-tp-balance {
+	display: grid;
+	gap: 14px;
+	margin-top: 28px;
+}
+
+.mega-tp-steps {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.mega-tp-steps article,
+.mega-tp-levels article,
+.mega-tp-balance article {
+	padding: 22px;
+	border: 1px solid var(--tp-line);
+	border-radius: 16px;
+	background: #fff;
+}
+
+.mega-tp-steps span {
+	display: inline-grid;
+	place-items: center;
+	width: 2.2rem;
+	height: 2.2rem;
+	margin-bottom: 12px;
+	border-radius: 50%;
+	background: var(--tp-navy);
+	color: var(--tp-gold);
+	font-weight: 850;
+}
+
+.mega-tp-steps h3,
+.mega-tp-levels h3,
+.mega-tp-balance h3 {
+	margin: 0 0 8px;
+	font-size: 1.15rem;
+}
+
+.mega-tp-wink {
+	padding: 72px 0;
+	color: #e8f4f6;
+	background: var(--tp-navy);
+}
+
+.mega-tp-wink .mega-tp-kicker {
+	color: var(--tp-gold);
+}
+
+.mega-tp-wink h2 {
+	color: #fff;
+}
+
+.mega-tp-wink p {
+	max-width: 46rem;
+	color: #c5d8e2;
+}
+
+.mega-tp-levels {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.mega-tp-levels article > span {
+	display: inline-block;
+	margin-bottom: 14px;
+	padding: 5px 9px;
+	border-radius: 999px;
+	background: #efe5d1;
+	color: #8a5a12;
+	font-size: 0.7rem;
+	font-weight: 850;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.mega-tp-levels .is-treasure {
+	border-color: #e3c36a;
+	background: #fff8e3;
+}
+
+.mega-tp-levels .is-treasure > span {
+	background: var(--tp-gold);
+	color: var(--tp-navy);
+}
+
+.mega-tp-levels strong {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 2rem;
+}
+
+.mega-tp-levels small {
+	color: var(--tp-teal);
+	font-weight: 800;
+}
+
+.mega-tp-balance {
+	grid-template-columns: 1fr 1fr;
+}
+
+.mega-tp-close {
+	padding: 72px 0;
+	color: #e8f4f6;
+	background: var(--tp-teal);
+	text-align: center;
+}
+
+.mega-tp-close h2 {
+	color: #fff;
+}
+
+.mega-tp-close p {
+	max-width: 40rem;
+	margin: 0 auto 24px;
+	color: #dff4f4;
+}
+
+.mega-tp-close .mega-tp-btn.is-primary {
+	border-color: #fff;
+	background: #fff;
+	color: var(--tp-navy);
+}
+
+.mega-tp-notice {
+	padding: 28px 0 64px;
+}
+
+.mega-tp-notice strong {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.mega-tp-notice p {
+	margin: 0;
+	color: var(--tp-muted);
+}
+
+@media (max-width: 860px) {
+	.mega-tp-hero-grid,
+	.mega-tp-steps,
+	.mega-tp-levels,
+	.mega-tp-balance {
+		grid-template-columns: 1fr;
+	}
+
+	.mega-tp-hero {
+		padding: 52px 0 48px;
+	}
+
+	.mega-tp-section,
+	.mega-tp-wink,
+	.mega-tp-close {
+		padding: 56px 0;
+	}
+}

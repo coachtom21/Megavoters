@@ -53,6 +53,26 @@ function megavoters_enqueue_styles() {
 			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
 		);
 	}
+
+	if ( is_page( 'oligopoly' ) ) {
+		$path = get_stylesheet_directory() . '/assets/css/go-live-moment.css';
+		wp_enqueue_style(
+			'megavoters-go-live-moment',
+			megavoters_asset_url( 'css/go-live-moment.css' ),
+			array( 'megavoters-portal' ),
+			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
+		);
+	}
+
+	if ( is_page( 'treasured-penny' ) ) {
+		$path = get_stylesheet_directory() . '/assets/css/treasured-penny.css';
+		wp_enqueue_style(
+			'megavoters-treasured-penny',
+			megavoters_asset_url( 'css/treasured-penny.css' ),
+			array( 'megavoters-portal' ),
+			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'megavoters_enqueue_styles', 30 );
 
@@ -73,6 +93,10 @@ function megavoters_document_title( $title ) {
 
 	if ( is_page( 'terms' ) ) {
 		return __( 'Terms of Service | United Citizens Community Checkers', 'megavoters' );
+	}
+
+	if ( is_page( 'treasured-penny' ) ) {
+		return __( 'The Treasured Penny | MEGAvoters', 'megavoters' );
 	}
 
 	return $title;

@@ -22,7 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</a>
 	<nav aria-label="<?php esc_attr_e( 'Primary', 'megavoters' ); ?>">
 		<a href="<?php echo esc_url( megavoters_home_section( 'discover' ) ); ?>"><?php esc_html_e( 'Discover', 'megavoters' ); ?></a>
+		<a href="<?php echo esc_url( megavoters_page_url( 'treasured-penny' ) ); ?>"><?php esc_html_e( 'Treasured Penny', 'megavoters' ); ?></a>
 		<a href="<?php echo esc_url( megavoters_home_section( 'pilot' ) ); ?>"><?php esc_html_e( 'The pilot', 'megavoters' ); ?></a>
+		<a href="<?php echo esc_url( megavoters_go_live_url() ); ?>"><?php esc_html_e( 'Go Live Moment', 'megavoters' ); ?></a>
 		<a href="<?php echo esc_url( megavoters_guidelines_url() ); ?>"><?php esc_html_e( 'Guidelines', 'megavoters' ); ?></a>
 		<a href="<?php echo esc_url( megavoters_page_url( 'terms' ) ); ?>"><?php esc_html_e( 'Terms', 'megavoters' ); ?></a>
 		<a href="<?php echo esc_url( megavoters_home_section( 'privacy' ) ); ?>"><?php esc_html_e( 'Privacy', 'megavoters' ); ?></a>
@@ -32,7 +34,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<summary><?php esc_html_e( 'Menu', 'megavoters' ); ?></summary>
 		<nav>
 			<a href="<?php echo esc_url( megavoters_home_section( 'discover' ) ); ?>"><?php esc_html_e( 'Discover', 'megavoters' ); ?></a>
+			<a href="<?php echo esc_url( megavoters_page_url( 'treasured-penny' ) ); ?>"><?php esc_html_e( 'Treasured Penny', 'megavoters' ); ?></a>
 			<a href="<?php echo esc_url( megavoters_home_section( 'pilot' ) ); ?>"><?php esc_html_e( 'The pilot', 'megavoters' ); ?></a>
+			<a href="<?php echo esc_url( megavoters_go_live_url() ); ?>"><?php esc_html_e( 'Go Live Moment', 'megavoters' ); ?></a>
 			<a href="<?php echo esc_url( megavoters_guidelines_url() ); ?>"><?php esc_html_e( 'Guidelines', 'megavoters' ); ?></a>
 			<a href="<?php echo esc_url( megavoters_page_url( 'terms' ) ); ?>"><?php esc_html_e( 'Terms', 'megavoters' ); ?></a>
 			<a href="<?php echo esc_url( megavoters_home_section( 'privacy' ) ); ?>"><?php esc_html_e( 'Privacy', 'megavoters' ); ?></a>
