@@ -11,10 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MEGAVOTERS_THEME_VERSION', '1.3.2' );
+define( 'MEGAVOTERS_THEME_VERSION', '1.3.7' );
 
 require_once get_stylesheet_directory() . '/inc/helpers.php';
 require_once get_stylesheet_directory() . '/inc/setup-pages.php';
+require_once get_stylesheet_directory() . '/inc/start-handoff.php';
+require_once get_stylesheet_directory() . '/inc/doorway-counts.php';
 require_once get_stylesheet_directory() . '/inc/coach-tom-welcome.php';
 
 /**
@@ -36,6 +38,48 @@ function megavoters_enqueue_styles() {
 	wp_dequeue_style( 'hello-elementor' );
 	wp_dequeue_style( 'hello-elementor-theme-style' );
 	wp_dequeue_style( 'hello-elementor-header-footer' );
+
+	if ( is_page( 'start' ) ) {
+		$path = get_stylesheet_directory() . '/assets/css/start.css';
+		wp_enqueue_style(
+			'megavoters-start',
+			megavoters_asset_url( 'css/start.css' ),
+			array(),
+			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
+		);
+
+		$script = get_stylesheet_directory() . '/assets/js/start.js';
+		wp_enqueue_script(
+			'megavoters-start',
+			megavoters_asset_url( 'js/start.js' ),
+			array(),
+			file_exists( $script ) ? (string) filemtime( $script ) : MEGAVOTERS_THEME_VERSION,
+			true
+		);
+		wp_localize_script(
+			'megavoters-start',
+			'MEGAVOTER_START_CONFIG',
+			array(
+				'observeUrl'         => megavoters_discover_url(),
+				'startEndpoint'      => megavoters_start_endpoint(),
+				'doorwayEndpoint'    => rest_url( 'megavoters/v1/doorway' ),
+				'allowedHandoffHost' => megavoters_handoff_host(),
+				'nonce'              => wp_create_nonce( 'wp_rest' ),
+			)
+		);
+		return;
+	}
+
+	if ( is_page( 'discover' ) ) {
+		$path = get_stylesheet_directory() . '/assets/css/discover.css';
+		wp_enqueue_style(
+			'megavoters-discover',
+			megavoters_asset_url( 'css/discover.css' ),
+			array(),
+			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
+		);
+		return;
+	}
 
 	wp_enqueue_style(
 		'megavoters-portal',
@@ -73,6 +117,16 @@ function megavoters_enqueue_styles() {
 			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
 		);
 	}
+
+	if ( is_page( 'the-pilot' ) ) {
+		$path = get_stylesheet_directory() . '/assets/css/the-pilot.css';
+		wp_enqueue_style(
+			'megavoters-the-pilot',
+			megavoters_asset_url( 'css/the-pilot.css' ),
+			array( 'megavoters-portal' ),
+			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'megavoters_enqueue_styles', 30 );
 
@@ -97,6 +151,18 @@ function megavoters_document_title( $title ) {
 
 	if ( is_page( 'treasured-penny' ) ) {
 		return __( 'The Treasured Penny | MEGAvoters', 'megavoters' );
+	}
+
+	if ( is_page( 'the-pilot' ) ) {
+		return __( 'The Pilot | $30 Trade Value + $4 Social Impact | MEGAvoters', 'megavoters' );
+	}
+
+	if ( is_page( 'start' ) ) {
+		return __( 'Begin | MEGAvoters', 'megavoters' );
+	}
+
+	if ( is_page( 'discover' ) ) {
+		return __( 'Discover the Pilot | MEGAvoters', 'megavoters' );
 	}
 
 	return $title;

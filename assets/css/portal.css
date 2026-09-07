@@ -86,3 +86,12 @@
 .mega-media-doc small{font-weight:700;color:#587083;margin-top:6px;text-transform:none;letter-spacing:0}
 @media(max-width:900px){.mega-media-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.mega-media{padding:28px 20px 8px}.campaign-bar{font-size:11px;padding:12px 14px}}
+
+.site-header nav a.is-current,
+.mega-menu-toggle nav a.is-current{
+	color:var(--teal);
+}
+.site-header nav a.is-current:hover,
+.mega-menu-toggle nav a.is-current:hover{
+	color:var(--teal);
+}

@@ -28,6 +28,9 @@ function megavoters_ensure_pages() {
 		'independence'       => __( 'Independence', 'megavoters' ),
 		'rsvp'               => __( 'RSVP', 'megavoters' ),
 		'treasured-penny'    => __( 'Treasured Penny', 'megavoters' ),
+		'the-pilot'          => __( 'The Pilot', 'megavoters' ),
+		'start'              => __( 'Start', 'megavoters' ),
+		'discover'           => __( 'Discover the Pilot', 'megavoters' ),
 	);
 
 	$created = false;
@@ -126,3 +129,80 @@ function megavoters_ensure_treasured_penny_page() {
 	update_option( 'megavoters_treasured_penny_page', '1' );
 }
 add_action( 'init', 'megavoters_ensure_treasured_penny_page', 22 );
+
+/**
+ * Publish The Pilot page once.
+ *
+ * @return void
+ */
+function megavoters_ensure_the_pilot_page() {
+	if ( get_option( 'megavoters_the_pilot_page' ) === '1' ) {
+		$page = get_page_by_path( 'the-pilot' );
+		if ( $page instanceof WP_Post ) {
+			return;
+		}
+	}
+
+	$page = get_page_by_path( 'the-pilot' );
+	if ( ! ( $page instanceof WP_Post ) ) {
+		wp_insert_post(
+			array(
+				'post_title'     => __( 'The Pilot', 'megavoters' ),
+				'post_name'      => 'the-pilot',
+				'post_status'    => 'publish',
+				'post_type'      => 'page',
+				'post_content'   => '',
+				'comment_status' => 'closed',
+				'ping_status'    => 'closed',
+			)
+		);
+	}
+
+	update_option( 'megavoters_the_pilot_page', '1' );
+}
+add_action( 'init', 'megavoters_ensure_the_pilot_page', 23 );
+
+/**
+ * Publish Start and Discover funnel pages once.
+ *
+ * @return void
+ */
+function megavoters_ensure_start_discover_pages() {
+	$pages = array(
+		'start'    => __( 'Start', 'megavoters' ),
+		'discover' => __( 'Discover the Pilot', 'megavoters' ),
+	);
+
+	$created = false;
+
+	foreach ( $pages as $slug => $title ) {
+		$option = 'megavoters_' . str_replace( '-', '_', $slug ) . '_page';
+		$exists = get_page_by_path( $slug ) instanceof WP_Post;
+
+		if ( get_option( $option ) === '1' && $exists ) {
+			continue;
+		}
+
+		if ( ! $exists ) {
+			wp_insert_post(
+				array(
+					'post_title'     => $title,
+					'post_name'      => $slug,
+					'post_status'    => 'publish',
+					'post_type'      => 'page',
+					'post_content'   => '',
+					'comment_status' => 'closed',
+					'ping_status'    => 'closed',
+				)
+			);
+			$created = true;
+		}
+
+		update_option( $option, '1' );
+	}
+
+	if ( $created ) {
+		flush_rewrite_rules( false );
+	}
+}
+add_action( 'init', 'megavoters_ensure_start_discover_pages', 24 );

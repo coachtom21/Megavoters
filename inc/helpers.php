@@ -24,6 +24,9 @@ function megavoters_page_slugs() {
 		'independence',
 		'rsvp',
 		'treasured-penny',
+		'the-pilot',
+		'start',
+		'discover',
 	);
 }
 
@@ -237,5 +240,73 @@ function megavoters_page_templates() {
 		'independence'         => 'templates/page-independence.php',
 		'rsvp'                 => 'templates/page-rsvp.php',
 		'treasured-penny'      => 'templates/page-treasured-penny.php',
+		'the-pilot'            => 'templates/page-the-pilot.php',
+		'start'                => 'templates/page-start.php',
+		'discover'             => 'templates/page-discover.php',
 	);
+}
+
+/**
+ * The Pilot study-guide page.
+ *
+ * @return string
+ */
+function megavoters_the_pilot_url() {
+	return megavoters_page_url( 'the-pilot' );
+}
+
+/**
+ * Start funnel page.
+ *
+ * @return string
+ */
+function megavoters_start_url() {
+	return megavoters_page_url( 'start' );
+}
+
+/**
+ * Discover / Observe page.
+ *
+ * @return string
+ */
+function megavoters_discover_url() {
+	return megavoters_page_url( 'discover' );
+}
+
+/**
+ * Whether a header nav item matches the current request.
+ *
+ * @param string $item Nav key: discover, treasured-penny, the-pilot, go-live, guidelines, terms, privacy, rsvp.
+ * @return bool
+ */
+function megavoters_nav_item_is_current( $item ) {
+	switch ( $item ) {
+		case 'discover':
+			return is_page( 'discover' );
+		case 'go-live':
+			return is_page( 'oligopoly' );
+		case 'the-pilot':
+		case 'treasured-penny':
+		case 'guidelines':
+		case 'terms':
+		case 'privacy':
+		case 'rsvp':
+			return is_page( $item );
+		default:
+			return false;
+	}
+}
+
+/**
+ * class + aria-current attributes for a header nav link.
+ *
+ * @param string $item Nav key.
+ * @return string
+ */
+function megavoters_nav_current_attrs( $item ) {
+	if ( ! megavoters_nav_item_is_current( $item ) ) {
+		return '';
+	}
+
+	return ' class="is-current" aria-current="page"';
 }
