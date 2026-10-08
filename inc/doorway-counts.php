@@ -1,8 +1,8 @@
 <?php
 /**
- * Doorway counts on MEGAvoters: Start viewed, Participate chosen.
+ * Doorway counts on Miners: Start viewed, Participate chosen.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

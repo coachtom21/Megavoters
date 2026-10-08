@@ -2,7 +2,7 @@
 /**
  * Guidelines + Study Guide — client megavoters-guidelines.html
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

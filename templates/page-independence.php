@@ -2,7 +2,7 @@
 /**
  * Independence / no-affiliation — client README + portal boundary + START_HERE.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +24,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 
 	<h2><?php esc_html_e( 'Required project separation', 'megavoters' ); ?></h2>
 	<ul>
-		<li><?php esc_html_e( 'megavoters.com — MEGAvoter discovery, licensing, membership-intention, and WooCommerce $0 backorder entry point.', 'megavoters' ); ?></li>
+		<li><?php esc_html_e( 'megavoters.com — Miner discovery, licensing, membership-intention, and WooCommerce $0 backorder entry point.', 'megavoters' ); ?></li>
 		<li><?php esc_html_e( 'legacytoliveby.org — Human Gold Rush, Practice FAITH touchstone RSVP, and proposed LAUGH fulfillment events. LLB touchstone QR codes route here.', 'megavoters' ); ?></li>
 		<li><?php esc_html_e( 'humanblockchain.info — YAM-is-On trade-value and dual-ledger explanations.', 'megavoters' ); ?></li>
 		<li><?php esc_html_e( 'smallstreet.app — proposed XP/Oligopoly testnet sandbox.', 'megavoters' ); ?></li>

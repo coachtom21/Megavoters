@@ -1,8 +1,8 @@
 <?php
 /**
- * MEGAvoters /discover/ — Observe path. No forms, no records.
+ * Miners /discover/ — Observe path. No forms, no records.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $home_url  = home_url( '/' );
-$start_url = megavoters_page_url( 'start' );
-$llb_url   = megavoters_llb_home_url();
+$start_url = megavoters_with_hbc_ctx( megavoters_page_url( 'start' ) );
+$llb_url   = megavoters_with_hbc_ctx( megavoters_llb_home_url() );
 
 $mega_body_class = 'mega-discover-body';
 include get_stylesheet_directory() . '/inc/layout-start.php';
@@ -40,10 +40,22 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 			</div>
 			<dl class="mv-facts">
 				<div><dt><?php esc_html_e( 'Format', 'megavoters' ); ?></dt><dd><?php esc_html_e( 'RSVP-only touchstone gathering', 'megavoters' ); ?></dd></div>
-				<div><dt><?php esc_html_e( 'Location', 'megavoters' ); ?></dt><dd><?php esc_html_e( 'Peachtree Corners, Georgia — proposed', 'megavoters' ); ?></dd></div>
+				<div><dt><?php esc_html_e( 'Location', 'megavoters' ); ?></dt><dd><?php esc_html_e( 'Stone Mountain, Georgia — proposed', 'megavoters' ); ?></dd></div>
 				<div><dt><?php esc_html_e( 'Cost', 'megavoters' ); ?></dt><dd><?php esc_html_e( 'No payment to attend the testnet experience', 'megavoters' ); ?></dd></div>
 				<div><dt><?php esc_html_e( 'Your control', 'megavoters' ); ?></dt><dd><?php esc_html_e( 'Participate, observe, walk away, or scan nothing', 'megavoters' ); ?></dd></div>
 			</dl>
+		</div>
+	</section>
+
+	<section class="mv-invite-video" aria-label="<?php echo esc_attr__( "You're Invited", 'megavoters' ); ?>">
+		<div class="mv-wrap">
+			<div class="mv-invite-video__frame">
+				<video controls playsinline preload="metadata">
+					<source src="<?php echo esc_url( megavoters_youre_invited_video_url() ); ?>" type="video/mp4">
+					<?php esc_html_e( 'Your browser does not support the video tag.', 'megavoters' ); ?>
+				</video>
+			</div>
+			<p class="mv-invite-video__caption"><?php esc_html_e( "You're Invited", 'megavoters' ); ?></p>
 		</div>
 	</section>
 
@@ -127,10 +139,10 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 			<div class="mv-faq">
 				<details>
 					<summary><?php esc_html_e( 'Is this a church program?', 'megavoters' ); ?></summary>
-					<p><?php esc_html_e( 'No. Unity Church–Atlanta and Reverend Jenn have been invited to consider a proposed Peachtree Corners pilot, but no participation, affiliation, approval, or endorsement is claimed without express written acceptance.', 'megavoters' ); ?></p>
+					<p><?php esc_html_e( 'No. This is not a church program. Named venues, hosts, and organizations remain proposed only. No participation, affiliation, approval, or endorsement is claimed without express written acceptance.', 'megavoters' ); ?></p>
 				</details>
 				<details>
-					<summary><?php esc_html_e( 'Must I be Christian or accept Namaste Christian?', 'megavoters' ); ?></summary>
+					<summary><?php esc_html_e( 'Must I be Christian?', 'megavoters' ); ?></summary>
 					<p><?php esc_html_e( 'No belief test is used. Practice FAITH is presented as a relationship guideline: Fair, Accepting, Insightful, Transparent, and Humble. No choice measures salvation, faith, or spiritual worth.', 'megavoters' ); ?></p>
 				</details>
 				<details>
@@ -143,11 +155,13 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 				</details>
 				<details>
 					<summary><?php esc_html_e( 'What counts as successful onboarding?', 'megavoters' ); ?></summary>
-					<p><?php esc_html_e( 'Both a registered device and explicit Discord Gracebook covenant acceptance are required. A page visit, QR scan, RSVP, Discord server join, or verbal expression of interest is not completed onboarding.', 'megavoters' ); ?></p>
+					<p><?php esc_html_e( 'A registered device is enough to continue. Discord Gracebook is optional, and it is not the only way off this page. A page visit, QR scan, or RSVP here does not change a Human Gold RSVP or XP record. Nuggets explore for free. Miner is the optional $12 yearly role. This site stays MEGAvoters.', 'megavoters' ); ?></p>
 				</details>
 			</div>
 		</div>
 	</section>
+
+	<?php megavoters_render_hbc_return_panel(); ?>
 
 	<section class="mv-cta" aria-labelledby="next-title">
 		<div class="mv-wrap">

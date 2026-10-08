@@ -2,7 +2,7 @@
 /**
  * The Pilot — client “What happens at this pilot” + $30/$4 study guide.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -44,7 +44,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 		<div class="mv-wrap">
 			<p class="mv-kicker"><?php esc_html_e( 'What happens at this pilot?', 'megavoters' ); ?></p>
 			<h2 id="pilot-title"><?php esc_html_e( 'A small RSVP gathering that measures showing up—not personal beliefs.', 'megavoters' ); ?></h2>
-			<p class="mv-intro mv-pilot__intro"><?php esc_html_e( 'The proposed first LAUGH event—Leaders Annual United Group Hug—is a simple, RSVP-only touchstone gathering. Unity Church–Atlanta and Reverend Jenn have been invited to consider hosting; no participation or endorsement should be assumed without an express response.', 'megavoters' ); ?></p>
+			<p class="mv-intro mv-pilot__intro"><?php esc_html_e( 'The proposed first LAUGH event—Leaders Annual United Group Hug—is a simple, RSVP-only touchstone gathering. No host participation or endorsement should be assumed without an express response.', 'megavoters' ); ?></p>
 
 			<div class="mv-pilot-flow" aria-label="<?php echo esc_attr__( 'Six steps in the proposed pilot', 'megavoters' ); ?>">
 				<article>
@@ -129,7 +129,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 				<article class="mv-step">
 					<span class="mv-step__number">1</span>
 					<h3><?php esc_html_e( 'An offer is made', 'megavoters' ); ?></h3>
-					<p><?php esc_html_e( 'A participating MEGAvoter initiates a YAM-is-On offer with a stated trade value of $30.', 'megavoters' ); ?></p>
+					<p><?php esc_html_e( 'A participating Miner initiates a YAM-is-On offer with a stated trade value of $30.', 'megavoters' ); ?></p>
 				</article>
 				<article class="mv-step">
 					<span class="mv-step__number">2</span>
@@ -239,7 +239,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 			<p class="mv-kicker"><?php esc_html_e( 'The bottom line', 'megavoters' ); ?></p>
 			<h2 id="bottom-line-title"><?php esc_html_e( 'The testnet records what people agreed happened—and whether the community impact was later supported.', 'megavoters' ); ?></h2>
 			<p><?php esc_html_e( 'It does not hold money, guarantee an outcome, or turn human presence into currency.', 'megavoters' ); ?></p>
-			<p class="mv-footnote"><?php esc_html_e( 'Proposed behavioral-research testnet. References to Unity Church–Atlanta, Reverend Jenn, academic institutions, companies, community partners, or other organizations remain proposed unless each party expressly accepts participation. This page is a study guide, not financial, tax, accounting, or legal advice.', 'megavoters' ); ?></p>
+			<p class="mv-footnote"><?php esc_html_e( 'Proposed behavioral-research testnet. References to academic institutions, companies, community partners, or other organizations remain proposed unless each party expressly accepts participation. This page is a study guide, not financial, tax, accounting, or legal advice.', 'megavoters' ); ?></p>
 		</div>
 	</section>
 </main>

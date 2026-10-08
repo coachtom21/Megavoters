@@ -4,7 +4,7 @@
  *
  * Source: GoLive/go-live-moment-section.html
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -76,8 +76,8 @@ $mega_guidelines_url = function_exists( 'megavoters_guidelines_url' ) ? megavote
 			<div class="mega-go-live__role-grid">
 				<article><h4><?php esc_html_e( 'United Citizens', 'megavoters' ); ?></h4><p><?php esc_html_e( 'The shared civic identity connecting people who gather, celebrate, meet needs, serve others, and help determine what the testnet teaches.', 'megavoters' ); ?></p></article>
 				<article><h4><?php esc_html_e( 'Organized Krill', 'megavoters' ); ?></h4><p><?php esc_html_e( 'Thirty-member Patron Organizing Communities that coordinate campaign materials, participation, distribution, and local acts of gratitude.', 'megavoters' ); ?></p></article>
-				<article><h4><?php esc_html_e( "YAM'ers", 'megavoters' ); ?></h4><p><?php esc_html_e( 'Observers, buyers, and shoppers who may browse, participate in an encounter, or choose not to scan.', 'megavoters' ); ?></p></article>
-				<article><h4><?php esc_html_e( 'MEGAvoters', 'megavoters' ); ?></h4><p><?php esc_html_e( 'Participants, sellers, givers, and messengers who help Community Checkers move from an idea into voluntary local practice.', 'megavoters' ); ?></p></article>
+				<article><h4><?php esc_html_e( "Nuggets", 'megavoters' ); ?></h4><p><?php esc_html_e( 'Observers, buyers, and shoppers who may browse, participate in an encounter, or choose not to scan.', 'megavoters' ); ?></p></article>
+				<article><h4><?php esc_html_e( 'Miners', 'megavoters' ); ?></h4><p><?php esc_html_e( 'Participants, sellers, givers, and messengers who help Community Checkers move from an idea into voluntary local practice.', 'megavoters' ); ?></p></article>
 			</div>
 		</section>
 

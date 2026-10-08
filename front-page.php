@@ -1,8 +1,8 @@
 <?php
 /**
- * MEGAvoters discovery landing — reproduced from the client portal source.
+ * Miners discovery landing — reproduced from the client portal source.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -47,7 +47,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 
 	<section class="pilot-hero">
 		<div class="pilot-copy">
-			<p class="eyebrow"><i></i><?php esc_html_e( 'Limited pilot • Peachtree Corners, Georgia', 'megavoters' ); ?></p>
+			<p class="eyebrow"><i></i><?php esc_html_e( 'Limited pilot • Stone Mountain, Georgia', 'megavoters' ); ?></p>
 			<h1><?php esc_html_e( 'Come curious.', 'megavoters' ); ?><br><em><?php esc_html_e( 'Leave with your choice.', 'megavoters' ); ?></em></h1>
 			<p class="lede"><?php esc_html_e( 'A proposed one-location discovery experience where United Citizens can practice FAITH, explore Community Checkers, and decide whether showing up for one another can build peace—without surrendering identity, belief, or independence.', 'megavoters' ); ?></p>
 			<div class="actions">
@@ -64,7 +64,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 			<img src="<?php echo esc_url( megavoters_image_url( 'united-citizens.png' ) ); ?>" alt="<?php esc_attr_e( 'United Citizens — Your voice, your choice, your treasury', 'megavoters' ); ?>">
 			<div class="pilot-badge">
 				<b><?php esc_html_e( 'PROPOSED SITE', 'megavoters' ); ?></b>
-				<span><?php esc_html_e( 'Unity Church–Atlanta', 'megavoters' ); ?><br><?php esc_html_e( 'Peachtree Corners, GA', 'megavoters' ); ?></span>
+				<span><?php esc_html_e( 'Stone Mountain, GA', 'megavoters' ); ?></span>
 			</div>
 		</div>
 	</section>
@@ -88,7 +88,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 			<article><b>H</b><span><?php esc_html_e( 'Humble', 'megavoters' ); ?></span></article>
 		</div>
 		<blockquote><?php esc_html_e( 'Saved through Christ. Inspired by goodwill. Practicing FAITH with everyone.', 'megavoters' ); ?></blockquote>
-		<p class="theology-note"><b><?php esc_html_e( 'Namaste Christian', 'megavoters' ); ?></b> <?php esc_html_e( 'is a proposed practice for this founding gathering. It accepts salvation through Christ while recognizing the dignity and goodwill of others. The symbolic “baptism of goodwill” is not sacramental baptism and does not measure salvation, belief, or spiritual worth.', 'megavoters' ); ?></p>
+		<p class="theology-note"><?php esc_html_e( 'This founding gathering accepts salvation through Christ while recognizing the dignity and goodwill of others. The symbolic “baptism of goodwill” is not sacramental baptism and does not measure salvation, belief, or spiritual worth.', 'megavoters' ); ?></p>
 	</section>
 
 	<section class="journey" id="pilot">
@@ -101,7 +101,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 			<article>
 				<span>01</span>
 				<h3><?php esc_html_e( 'Discover', 'megavoters' ); ?></h3>
-				<p><?php esc_html_e( 'Read the invitation. Explore the proposed meanings of MEGAvoter, Namaste Christian, Organized Krill, Community Checkers, and Detente 2030 before responding.', 'megavoters' ); ?></p>
+				<p><?php esc_html_e( 'Read the invitation. Explore the proposed meanings of Miner, Organized Krill, Community Checkers, and Detente 2030 before responding.', 'megavoters' ); ?></p>
 				<small><?php esc_html_e( 'No registration required', 'megavoters' ); ?></small>
 			</article>
 			<article>
@@ -200,7 +200,7 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 		<aside>
 			<span><?php esc_html_e( 'FOUNDING POSSIBILITY', 'megavoters' ); ?></span>
 			<h3><?php esc_html_e( 'A Baptism of Goodwill', 'megavoters' ); ?></h3>
-			<p><?php esc_html_e( 'A symbolic moment of intention and renewal at the proposed Peachtree Corners location—never a substitute for Christian baptism or a judgment of faith.', 'megavoters' ); ?></p>
+			<p><?php esc_html_e( 'A symbolic moment of intention and renewal at the proposed Stone Mountain location—never a substitute for Christian baptism or a judgment of faith.', 'megavoters' ); ?></p>
 			<b><?php esc_html_e( 'God Wink! Hallelujah! Amen.', 'megavoters' ); ?></b>
 		</aside>
 	</section>

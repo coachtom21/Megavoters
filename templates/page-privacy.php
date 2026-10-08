@@ -2,7 +2,7 @@
 /**
  * Privacy — client portal + Terms §8 + Guidelines §2.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

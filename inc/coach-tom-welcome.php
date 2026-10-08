@@ -2,7 +2,7 @@
 /**
  * Coach Tom Welcomes Everyone — click-to-play audio (no autoplay, no tracking).
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ function megavoters_should_show_coach_tom() {
 }
 
 /**
- * Enqueue Coach Tom player assets on the MEGAvoters homepage.
+ * Enqueue Coach Tom player assets on the Miners homepage.
  *
  * @return void
  */
@@ -41,7 +41,7 @@ function megavoters_enqueue_coach_tom_welcome() {
 add_action( 'wp_enqueue_scripts', 'megavoters_enqueue_coach_tom_welcome', 40 );
 
 /**
- * Print the Coach Tom player (MEGAvoters color mode).
+ * Print the Coach Tom player (Miners color mode).
  *
  * @return void
  */

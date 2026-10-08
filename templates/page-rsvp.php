@@ -2,7 +2,7 @@
 /**
  * RSVP — client portal RSVP section + Coach Tom welcome letter + booklet PDF.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

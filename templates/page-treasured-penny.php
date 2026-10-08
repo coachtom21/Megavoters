@@ -1,9 +1,9 @@
 <?php
 /**
- * Treasured Penny — LLB copy, MEGAvoters chrome.
+ * Treasured Penny — LLB copy, Miners chrome.
  * Gratitude only. Express Interest → legacytoliveby.org. No Woo.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

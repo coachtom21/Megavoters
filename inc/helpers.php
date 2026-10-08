@@ -1,8 +1,8 @@
 <?php
 /**
- * MEGAvoters theme helpers.
+ * Miners theme helpers.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,7 +31,7 @@ function megavoters_page_slugs() {
 }
 
 /**
- * Whether the current request uses a MEGAvoters portal template.
+ * Whether the current request uses a Miners portal template.
  *
  * @return bool
  */
@@ -101,6 +101,15 @@ function megavoters_llb_home_url() {
  */
 function megavoters_media_video_url() {
 	return 'https://www.megavoters.com/wp-content/uploads/2026/08/Community_Checkers__The_LAUGH_Gathering_Blueprint.mp4';
+}
+
+/**
+ * You're Invited video (Human Gold RSVP /start and /discover landings).
+ *
+ * @return string
+ */
+function megavoters_youre_invited_video_url() {
+	return 'https://legacytoliveby.org/wp-content/uploads/2026/09/Youre-Invited-2026-09-09.mp4';
 }
 
 /**

@@ -1,8 +1,8 @@
 <?php
 /**
- * MEGAvoters /start/ — Observe / Participate / Walk Away.
+ * Miners /start/ — Observe / Participate / Walk Away.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -56,7 +56,7 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 		<div class="mv-wrap mv-progress__inner">
 			<div class="mv-progress__step is-current"><span class="mv-progress__number">1</span><span><?php esc_html_e( 'Your choice', 'megavoters' ); ?></span></div>
 			<div class="mv-progress__step"><span class="mv-progress__number">2</span><span><?php esc_html_e( 'Register device', 'megavoters' ); ?></span></div>
-			<div class="mv-progress__step"><span class="mv-progress__number">3</span><span><?php esc_html_e( 'Accept Gracebook', 'megavoters' ); ?></span></div>
+			<div class="mv-progress__step"><span class="mv-progress__number">3</span><span><?php esc_html_e( 'Gracebook, if you wish', 'megavoters' ); ?></span></div>
 		</div>
 	</nav>
 
@@ -67,6 +67,16 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 				<h1 id="start-title"><?php esc_html_e( 'Can you practice FAITH with others?', 'megavoters' ); ?></h1>
 				<p class="mv-intro__lead"><?php esc_html_e( 'You do not have to agree with everyone. Decide whether you want to observe, participate, or walk away. No purchase, pledge, church enrollment, or character judgment follows from your choice.', 'megavoters' ); ?></p>
 				<p class="mv-faith"><span>F</span><?php esc_html_e( 'air', 'megavoters' ); ?> · <span>A</span><?php esc_html_e( 'ccepting', 'megavoters' ); ?> · <span>I</span><?php esc_html_e( 'nsightful', 'megavoters' ); ?> · <span>T</span><?php esc_html_e( 'ransparent', 'megavoters' ); ?> · <span>H</span><?php esc_html_e( 'umble', 'megavoters' ); ?></p>
+			</section>
+
+			<section class="mv-invite-video" aria-label="<?php echo esc_attr__( "You're Invited", 'megavoters' ); ?>">
+				<div class="mv-invite-video__frame">
+					<video controls playsinline preload="metadata">
+						<source src="<?php echo esc_url( megavoters_youre_invited_video_url() ); ?>" type="video/mp4">
+						<?php esc_html_e( 'Your browser does not support the video tag.', 'megavoters' ); ?>
+					</video>
+				</div>
+				<p class="mv-invite-video__caption"><?php esc_html_e( "You're Invited", 'megavoters' ); ?></p>
 			</section>
 
 			<section class="mv-choice-grid" aria-label="<?php echo esc_attr__( 'Choose your path', 'megavoters' ); ?>">
@@ -141,10 +151,10 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 					<p class="mv-lock"><strong><?php esc_html_e( 'Choose carefully:', 'megavoters' ); ?></strong> <?php esc_html_e( 'this first branch becomes defining when your device registration is confirmed and cannot later be changed.', 'megavoters' ); ?></p>
 					<label class="mv-confirm">
 						<input id="choice-confirmed" name="choice_confirmed" type="checkbox" required>
-						<span><?php esc_html_e( 'I understand that continuing begins voluntary device registration on HumanBlockchain.info. Discord Gracebook acceptance will still be required before onboarding is complete.', 'megavoters' ); ?></span>
+						<span><?php esc_html_e( 'I understand that continuing begins voluntary device registration on HumanBlockchain.info. Discord Gracebook is optional. It is not required to leave this page.', 'megavoters' ); ?></span>
 					</label>
 					<button class="mv-button" id="activate-button" type="submit"><?php esc_html_e( 'Activate This Device', 'megavoters' ); ?></button>
-					<p class="mv-form-note"><?php esc_html_e( 'This step creates no payment, financial pledge, research consent, XP award, or proof-of-delivery record.', 'megavoters' ); ?></p>
+					<p class="mv-form-note"><?php esc_html_e( 'This step creates no payment, financial pledge, research consent, XP award, or proof-of-delivery record. It does not change an existing Human Gold RSVP or XP record.', 'megavoters' ); ?></p>
 					<div id="form-message" role="status" aria-live="polite"></div>
 				</form>
 			</section>
@@ -155,6 +165,8 @@ include get_stylesheet_directory() . '/inc/layout-start.php';
 				<p><?php esc_html_e( 'This page creates no individual walk-away record. You may close it now or return to the public MEGAvoters homepage.', 'megavoters' ); ?></p>
 				<a class="mv-button mv-button--quiet" href="<?php echo esc_url( $home_url ); ?>"><?php esc_html_e( 'Return home', 'megavoters' ); ?></a>
 			</section>
+
+			<?php megavoters_render_hbc_return_panel(); ?>
 		</div>
 	</main>
 

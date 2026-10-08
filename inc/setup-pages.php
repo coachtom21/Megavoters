@@ -2,7 +2,7 @@
 /**
  * Create the supporting WordPress pages this theme expects.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

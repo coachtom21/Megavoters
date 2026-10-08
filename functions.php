@@ -11,11 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MEGAVOTERS_THEME_VERSION', '1.3.7' );
+define( 'MEGAVOTERS_THEME_VERSION', '1.3.8' );
 
 require_once get_stylesheet_directory() . '/inc/helpers.php';
 require_once get_stylesheet_directory() . '/inc/setup-pages.php';
 require_once get_stylesheet_directory() . '/inc/start-handoff.php';
+require_once get_stylesheet_directory() . '/inc/hbc-return.php';
 require_once get_stylesheet_directory() . '/inc/doorway-counts.php';
 require_once get_stylesheet_directory() . '/inc/coach-tom-welcome.php';
 
@@ -60,13 +61,14 @@ function megavoters_enqueue_styles() {
 			'megavoters-start',
 			'MEGAVOTER_START_CONFIG',
 			array(
-				'observeUrl'         => megavoters_discover_url(),
+				'observeUrl'         => megavoters_with_hbc_ctx( megavoters_discover_url() ),
 				'startEndpoint'      => megavoters_start_endpoint(),
 				'doorwayEndpoint'    => rest_url( 'megavoters/v1/doorway' ),
 				'allowedHandoffHost' => megavoters_handoff_host(),
 				'nonce'              => wp_create_nonce( 'wp_rest' ),
 			)
 		);
+		megavoters_enqueue_hbc_return();
 		return;
 	}
 
@@ -78,6 +80,7 @@ function megavoters_enqueue_styles() {
 			array(),
 			file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
 		);
+		megavoters_enqueue_hbc_return();
 		return;
 	}
 
@@ -129,6 +132,21 @@ function megavoters_enqueue_styles() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'megavoters_enqueue_styles', 30 );
+
+/**
+ * Closed-loop return panel on /start/ and /discover/.
+ *
+ * @return void
+ */
+function megavoters_enqueue_hbc_return() {
+	$path = get_stylesheet_directory() . '/assets/css/hbc-return.css';
+	wp_enqueue_style(
+		'megavoters-hbc-return',
+		megavoters_asset_url( 'css/hbc-return.css' ),
+		array(),
+		file_exists( $path ) ? (string) filemtime( $path ) : MEGAVOTERS_THEME_VERSION
+	);
+}
 
 /**
  * Document title for the discovery landing.

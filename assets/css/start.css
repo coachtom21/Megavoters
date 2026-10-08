@@ -144,6 +144,31 @@ h1 {
 .mv-faith { margin: 18px 0 0; color: var(--navy); font-weight: 700; }
 .mv-faith span { color: var(--gold); }
 
+.mv-invite-video {
+	max-width: 760px;
+	margin: 0 auto 38px;
+	text-align: center;
+}
+.mv-invite-video__frame {
+	overflow: hidden;
+	border-radius: var(--radius);
+	background: var(--navy);
+	box-shadow: var(--shadow);
+	aspect-ratio: 16 / 9;
+}
+.mv-invite-video__frame video {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.mv-invite-video__caption {
+	margin: 12px 0 0;
+	color: var(--muted);
+	font-size: .92rem;
+	font-weight: 700;
+}
+
 .mv-choice-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

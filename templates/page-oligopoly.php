@@ -2,7 +2,7 @@
 /**
  * Oligopoly Objective — client bundle copy.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -1,7 +1,7 @@
 /**
- * MEGAvoters /start/ choices. Word stays on the page; only word_selected is sent later.
+ * Miners /start/ choices. Word stays on the page; only word_selected is sent later.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 (function () {
 	'use strict';

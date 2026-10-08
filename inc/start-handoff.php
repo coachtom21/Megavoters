@@ -2,7 +2,7 @@
 /**
  * Start funnel REST: create a one-time handoff token. Never store the touchstone word.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -221,7 +221,7 @@ function megavoters_rest_handoff_redeem_permission( WP_REST_Request $request ) {
 		return true;
 	}
 
-	$key = $request->get_header( 'X-Megavoters-Handoff-Key' );
+	$key = $request->get_header( 'X-MEGAvoters-Handoff-Key' );
 	if ( ! is_string( $key ) || ! hash_equals( (string) MEGAVOTERS_HANDOFF_SECRET, $key ) ) {
 		return new WP_Error(
 			'megavoters_forbidden',
@@ -281,6 +281,9 @@ function megavoters_rest_start( WP_REST_Request $request ) {
 	if ( ! is_array( $params ) ) {
 		$params = $request->get_params();
 	}
+
+	// Closed-loop context is echoed in page links only. Never store it, and never accept a caller-built return URL.
+	unset( $params['hbc_ctx'], $params['return_url'] );
 
 	if ( isset( $params['touchstone_word'] ) || isset( $params['word'] ) ) {
 		return new WP_Error(

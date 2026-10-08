@@ -2,7 +2,7 @@
 /**
  * United Citizens Community Checkers Terms of Service — counsel-review draft v0.9.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -129,10 +129,10 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 	</ul>
 
 	<h2><?php esc_html_e( '10. Research and institutional status', 'megavoters' ); ?></h2>
-	<p><?php esc_html_e( 'Community Checkers may support proposed behavioral research into presence and cooperation. Research participation must be separately presented from these Terms and from ordinary gameplay. Where applicable, informed consent, privacy protections, an independent IRB determination, and institutional authorization are required. References to CEI, Unity Church–Atlanta, UNG, AYSPS, Santa Fe Institute, or another organization remain proposed unless formally accepted in writing.', 'megavoters' ); ?></p>
+	<p><?php esc_html_e( 'Community Checkers may support proposed behavioral research into presence and cooperation. Research participation must be separately presented from these Terms and from ordinary gameplay. Where applicable, informed consent, privacy protections, an independent IRB determination, and institutional authorization are required. References to CEI, UNG, AYSPS, Santa Fe Institute, or another organization remain proposed unless formally accepted in writing.', 'megavoters' ); ?></p>
 
 	<h2><?php esc_html_e( '11. Hats, prizes, and promotions', 'megavoters' ); ?></h2>
-	<p><?php esc_html_e( 'The announced 15,000 MEGAvoter hats are a proposed prize pool and visible thank-you. Before any active entry or distribution, separate published prize terms must state eligibility, geography, dates, selection, notification, availability, quantity limits, sponsor/contact information, and the legally required no-purchase pathway. Research consent, scanning, practicing FAITH, religious belief, political choice, membership, pledge, purchase, or donation must not be represented as guaranteeing a prize or improving odds unless lawful published terms expressly provide otherwise.', 'megavoters' ); ?></p>
+	<p><?php esc_html_e( 'The announced 15,000 Miner hats are a proposed prize pool and visible thank-you. Before any active entry or distribution, separate published prize terms must state eligibility, geography, dates, selection, notification, availability, quantity limits, sponsor/contact information, and the legally required no-purchase pathway. Research consent, scanning, practicing FAITH, religious belief, political choice, membership, pledge, purchase, or donation must not be represented as guaranteeing a prize or improving odds unless lawful published terms expressly provide otherwise.', 'megavoters' ); ?></p>
 
 	<h2><?php esc_html_e( '12. Conduct and system integrity guidelines', 'megavoters' ); ?></h2>
 	<p><?php esc_html_e( 'Participants should not impersonate another checker, manipulate QR codes, create fraudulent delivery evidence, interfere with another person’s choice, exploit the testnet, introduce malicious code, or use records to harass, discriminate, surveil, or judge. The operator may limit or suspend technical access to protect people, evidence integrity, and system availability. Any such action should be documented without converting it into a moral judgment or deleting append-only history.', 'megavoters' ); ?></p>

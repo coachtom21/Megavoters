@@ -2,7 +2,7 @@
 /**
  * The Three Doors + Community Checkers Guidelines — client bundle copy.
  *
- * @package MEGAvoters
+ * @package Miners
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -37,12 +37,12 @@ include get_stylesheet_directory() . '/inc/site-header.php';
 	<h2><?php esc_html_e( '1. Voluntary entry', 'megavoters' ); ?></h2>
 	<p><?php esc_html_e( 'A person may choose to:', 'megavoters' ); ?></p>
 	<ul>
-		<li><?php esc_html_e( 'Observe as a YAM’er', 'megavoters' ); ?></li>
-		<li><?php esc_html_e( 'Participate as a MEGAvoter', 'megavoters' ); ?></li>
+		<li><?php esc_html_e( 'Observe as a Nugget', 'megavoters' ); ?></li>
+		<li><?php esc_html_e( 'Participate as a Miner', 'megavoters' ); ?></li>
 		<li><?php esc_html_e( 'Walk away', 'megavoters' ); ?></li>
 		<li><?php esc_html_e( 'Make no scan or response', 'megavoters' ); ?></li>
 	</ul>
-	<p><?php esc_html_e( 'Every outcome is valid. A MEGAvoter makes a proposed $12 annual membership pledge. No membership payment is collected during gameplay.', 'megavoters' ); ?></p>
+	<p><?php esc_html_e( 'Every outcome is valid. A Miner makes a proposed $12 annual membership pledge. No membership payment is collected during gameplay.', 'megavoters' ); ?></p>
 
 	<h2><?php esc_html_e( '2. Device recognition', 'megavoters' ); ?></h2>
 	<p><?php esc_html_e( 'The gameplay record recognizes a registered device identifier rather than displaying the person’s public name. One scan plus guideline acceptance may recognize that device as participating in the United Citizens community role.', 'megavoters' ); ?></p>
